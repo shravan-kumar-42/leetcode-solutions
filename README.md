@@ -1,12 +1,11 @@
 ﻿# ⚡ LeetCode Solutions
 
-> 🚀 A collection of my problem-solving journey in **DSA, Python & MySQL**.
+> 🚀 A collection of my journey solving **DSA, Python & MySQL problems** on LeetCode.
 
 <p align="center">
   <img src="https://img.shields.io/badge/LeetCode-Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
   <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-  <img src="https://img.shields.io/badge/DSA-Problem%20Solving-success?style=for-the-badge" />
 </p>
 
 ---
@@ -19,42 +18,25 @@
 
 ### 🔥 Problems Solved: **0**
 
-|    Category    |  Easy | Medium |  Hard | Total |
-| :------------: | :---: | :----: | :---: | :---: |
-|     🧠 DSA     |   0   |    0   |   0   |   0   |
-|    🐍 Python   |   0   |    0   |   0   |   0   |
-|    🗄️ MySQL   |   0   |    0   |   0   |   0   |
-| **🏆 Overall** | **0** |  **0** | **0** | **0** |
+|     Category    |  Easy | Medium |  Hard | Total |
+| :-------------: | :---: | :----: | :---: | :---: |
+| 🐍 Python + DSA |   0   |    0   |   0   |   0   |
+|    🗄️ MySQL    |   0   |    0   |   0   |   0   |
+|  **🏆 Overall** | **0** |  **0** | **0** | **0** |
 
 </p>
 
 <!-- SOLVED_COUNT_END -->
 
-> 📌 Statistics are automatically updated as new solutions are added.
+> 📌 Statistics are automatically updated whenever new solutions are added.
 
 ---
 
-## 🧠 Data Structures & Algorithms
+## 🐍 Python & DSA
 
-I solve DSA problems to improve my algorithmic thinking and problem-solving skills.
+My DSA problems are implemented using **Python**, so they are organized together by difficulty.
 
-|   Difficulty  |         Repository         |
-| :-----------: | :------------------------: |
-|  🟢 **Easy**  |   [DSA-Easy](./DSA-Easy)   |
-| 🟡 **Medium** | [DSA-Medium](./DSA-Medium) |
-|  🔴 **Hard**  |   [DSA-Hard](./DSA-Hard)   |
-
-### Topics
-
-`Arrays` • `Strings` • `Hashing` • `Two Pointers` • `Sliding Window` • `Stack` • `Queue` • `Linked List` • `Binary Search` • `Sorting` • `Trees` • `Graphs` • `Recursion` • `Backtracking` • `Dynamic Programming`
-
----
-
-## 🐍 Python
-
-Python solutions focused on strengthening programming fundamentals and logical thinking.
-
-|   Difficulty  |            Repository            |
+|   Difficulty  |             Solutions            |
 | :-----------: | :------------------------------: |
 |  🟢 **Easy**  |   [Python-Easy](./Python-Easy)   |
 | 🟡 **Medium** | [Python-Medium](./Python-Medium) |
@@ -62,15 +44,15 @@ Python solutions focused on strengthening programming fundamentals and logical t
 
 ### Topics
 
-`Variables` • `Data Types` • `Conditions` • `Loops` • `Functions` • `Lists` • `Tuples` • `Sets` • `Dictionaries` • `Strings` • `Recursion` • `OOP` • `Problem Solving`
+`Arrays` • `Strings` • `Hashing` • `Two Pointers` • `Sliding Window` • `Stack` • `Queue` • `Linked List` • `Binary Search` • `Sorting` • `Trees` • `Graphs` • `Recursion` • `Backtracking` • `Dynamic Programming`
 
 ---
 
 ## 🗄️ MySQL
 
-SQL solutions covering database concepts and query optimization.
+SQL problems focused on database concepts and query writing.
 
-|   Difficulty  |           Repository           |
+|   Difficulty  |            Solutions           |
 | :-----------: | :----------------------------: |
 |  🟢 **Easy**  |   [MySQL-Easy](./MySQL-Easy)   |
 | 🟡 **Medium** | [MySQL-Medium](./MySQL-Medium) |
@@ -82,36 +64,73 @@ SQL solutions covering database concepts and query optimization.
 
 ---
 
-## 🎯 Problem-Solving Approach
+## 🎯 My Problem-Solving Approach
 
 ```text
-        ┌──────────────┐
-        │  Understand  │
-        └──────┬───────┘
-               ↓
-        ┌──────────────┐
-        │    Analyze   │
-        └──────┬───────┘
-               ↓
-        ┌──────────────┐
-        │ Find Pattern │
-        └──────┬───────┘
-               ↓
-        ┌──────────────┐
-        │     Code     │
-        └──────┬───────┘
-               ↓
-        ┌──────────────┐
-        │     Test     │
-        └──────┬───────┘
-               ↓
-        ┌──────────────┐
-        │   Optimize   │
-        └──────┬───────┘
-               ↓
-        ┌──────────────┐
-        │    Learn     │
-        └──────────────┘
+Understand
+    ↓
+Analyze
+    ↓
+Find the Pattern
+    ↓
+Write the Solution
+    ↓
+Test
+    ↓
+Optimize
+    ↓
+Learn
+```
+
+> **I don't just solve problems. I focus on understanding the logic and pattern behind them.**
+
+---
+
+## 🔥 Learning Philosophy
+
+```text
+        CODE
+          ↓
+        DEBUG
+          ↓
+      UNDERSTAND
+          ↓
+       OPTIMIZE
+          ↓
+        LEARN
+          ↓
+        REPEAT
+```
+
+> **One problem. One concept. One improvement.**
+
+---
+
+## 🚀 Goals
+
+* [ ] Strengthen DSA fundamentals
+* [ ] Improve Python problem solving
+* [ ] Master SQL & MySQL
+* [ ] Learn common DSA patterns
+* [ ] Improve Time & Space Complexity
+* [ ] Solve Medium & Hard problems
+* [ ] Prepare for technical interviews
+* [ ] Stay consistent
+
+---
+
+## 📂 Repository Structure
+
+```text
+LeetCode-Solutions/
+│
+├── Python-Easy/
+├── Python-Medium/
+├── Python-Hard/
+│
+├── MySQL-Easy/
+├── MySQL-Medium/
+└── MySQL-Hard/
 ```
 
 ---
