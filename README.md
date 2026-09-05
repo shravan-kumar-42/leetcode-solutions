@@ -1,164 +1,141 @@
-﻿# ⚡ LeetCode Solutions
+﻿#!/usr/bin/env python3
+"""
+update_stats.py
 
-> 🚀 A collection of my journey solving **DSA, Python & MySQL problems** on LeetCode.
+Scans the LeetCode solution folders in this repo and rewrites the
+stats table in README.md (between <!-- STATS_START --> and <!-- STATS_END -->).
 
-<p align="center">
-  <img src="https://img.shields.io/badge/LeetCode-Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
-  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-</p>
+Folder -> category/difficulty mapping is defined in CATEGORY_FOLDERS below.
+A "solved problem" = one file inside a folder that matches SOLUTION_EXTENSIONS,
+excluding files listed in IGNORE_FILES.
 
----
+Usage:
+    python update_stats.py
 
-## 🏆 My Progress
+Run this from the root of the repo (same level as README.md).
+"""
 
-<!-- SOLVED_COUNT_START -->
+import re
+import sys
+from pathlib import Path
 
-<p align="center">
+REPO_ROOT = Path(__file__).resolve().parent
+README_PATH = REPO_ROOT / "README.md"
 
-### 🔥 Problems Solved: **0**
+# Map: category name -> {difficulty: folder_name}
+CATEGORY_FOLDERS = {
+    "Python + DSA": {
+        "Easy": "Python-Easy",
+        "Medium": "Python-Medium",
+        "Hard": "Python-Hard",
+    },
+    "MySQL": {
+        "Easy": "MySQL-Easy",
+        "Medium": "MySQL-Medium",
+        "Hard": "MySQL-Hard",
+    },
+}
 
-|     Category    |  Easy | Medium |  Hard | Total |
-| :-------------: | :---: | :----: | :---: | :---: |
-| 🐍 Python + DSA |   0   |    0   |   0   |   0   |
-|    🗄️ MySQL    |   0   |    0   |   0   |   0   |
-|  **🏆 Overall** | **0** |  **0** | **0** | **0** |
+# Which file types count as "a solution" per category
+SOLUTION_EXTENSIONS = {
+    "Python + DSA": {".py"},
+    "MySQL": {".sql"},
+}
 
-</p>
+# Files to ignore even if they match the extension (e.g. templates, init files)
+IGNORE_FILES = {"__init__.py", "readme.md", "template.py", "template.sql", ".gitkeep"}
 
-<!-- SOLVED_COUNT_END -->
 
-> 📌 Statistics are automatically updated whenever new solutions are added.
+def count_solutions(folder: Path, valid_exts: set) -> int:
+    """Count solution files directly inside `folder`, including one level
+    of subfolders (e.g. Python-Easy/001-two-sum/solution.py)."""
+    if not folder.exists():
+        return 0
 
----
+    count = 0
+    for path in folder.rglob("*"):
+        if path.is_file() and path.suffix.lower() in valid_exts:
+            if path.name.lower() not in IGNORE_FILES:
+                count += 1
+    return count
 
-## 🐍 Python & DSA
 
-My DSA problems are implemented using **Python**, so they are organized together by difficulty.
+def build_stats_table(counts: dict) -> str:
+    """counts = {category: {difficulty: n}} -> markdown table string."""
+    row_icons = {"Python + DSA": "🐍", "MySQL": "🗄️"}
+    total_easy = total_medium = total_hard = 0
+    lines = []
 
-|   Difficulty  |             Solutions            |
-| :-----------: | :------------------------------: |
-|  🟢 **Easy**  |   [Python-Easy](./Python-Easy)   |
-| 🟡 **Medium** | [Python-Medium](./Python-Medium) |
-|  🔴 **Hard**  |   [Python-Hard](./Python-Hard)   |
+    for category, diffs in counts.items():
+        e, m, h = diffs["Easy"], diffs["Medium"], diffs["Hard"]
+        total_easy += e
+        total_medium += m
+        total_hard += h
+        icon = row_icons.get(category, "")
+        lines.append(f"| {icon} {category} | {e} | {m} | {h} | {e + m + h} |")
 
-### Topics
+    grand_total = total_easy + total_medium + total_hard
+    lines.append(
+        f"| **🏆 Overall** | **{total_easy}** | **{total_medium}** | "
+        f"**{total_hard}** | **{grand_total}** |"
+    )
 
-`Arrays` • `Strings` • `Hashing` • `Two Pointers` • `Sliding Window` • `Stack` • `Queue` • `Linked List` • `Binary Search` • `Sorting` • `Trees` • `Graphs` • `Recursion` • `Backtracking` • `Dynamic Programming`
+    table = "\n".join(
+        [
+            "| Category | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🏆 Total |",
+            "|:--------:|:--------:|:----------:|:--------:|:---------:|",
+            *lines,
+        ]
+    )
 
----
+    header = f"<p align=\"center\">\n\n### 🔥 Problems Solved: **{grand_total}**\n\n</p>"
 
-## 🗄️ MySQL
+    return f"{header}\n\n{table}"
 
-SQL problems focused on database concepts and query writing.
 
-|   Difficulty  |            Solutions           |
-| :-----------: | :----------------------------: |
-|  🟢 **Easy**  |   [MySQL-Easy](./MySQL-Easy)   |
-| 🟡 **Medium** | [MySQL-Medium](./MySQL-Medium) |
-|  🔴 **Hard**  |   [MySQL-Hard](./MySQL-Hard)   |
+def update_readme(new_stats_block: str):
+    if not README_PATH.exists():
+        print(f"ERROR: {README_PATH} not found.", file=sys.stderr)
+        sys.exit(1)
 
-### Topics
+    content = README_PATH.read_text(encoding="utf-8")
 
-`SELECT` • `WHERE` • `GROUP BY` • `HAVING` • `ORDER BY` • `JOIN` • `Subqueries` • `EXISTS` • `CASE` • `Aggregate Functions` • `Window Functions` • `String Functions` • `Date Functions`
+    pattern = re.compile(
+        r"(<!-- STATS_START -->)(.*?)(<!-- STATS_END -->)", re.DOTALL
+    )
 
----
+    if not pattern.search(content):
+        print(
+            "ERROR: Could not find <!-- STATS_START --> / <!-- STATS_END --> "
+            "markers in README.md.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
-## 🎯 My Problem-Solving Approach
+    replacement = f"\\1\n{new_stats_block}\n\\3"
+    new_content = pattern.sub(replacement, content)
 
-```text
-Understand
-    ↓
-Analyze
-    ↓
-Find the Pattern
-    ↓
-Write the Solution
-    ↓
-Test
-    ↓
-Optimize
-    ↓
-Learn
-```
+    if new_content != content:
+        README_PATH.write_text(new_content, encoding="utf-8")
+        print("README.md stats updated.")
+    else:
+        print("README.md stats already up to date. No changes made.")
 
-> **I don't just solve problems. I focus on understanding the logic and pattern behind them.**
 
----
+def main():
+    counts = {}
+    for category, diffs in CATEGORY_FOLDERS.items():
+        valid_exts = SOLUTION_EXTENSIONS[category]
+        counts[category] = {}
+        for difficulty, folder_name in diffs.items():
+            folder = REPO_ROOT / folder_name
+            n = count_solutions(folder, valid_exts)
+            counts[category][difficulty] = n
+            print(f"{folder_name}: {n} solution(s)")
 
-## 🔥 Learning Philosophy
+    stats_block = build_stats_table(counts)
+    update_readme(stats_block)
 
-```text
-        CODE
-          ↓
-        DEBUG
-          ↓
-      UNDERSTAND
-          ↓
-       OPTIMIZE
-          ↓
-        LEARN
-          ↓
-        REPEAT
-```
 
-> **One problem. One concept. One improvement.**
-
----
-
-## 🚀 Goals
-
-* [ ] Strengthen DSA fundamentals
-* [ ] Improve Python problem solving
-* [ ] Master SQL & MySQL
-* [ ] Learn common DSA patterns
-* [ ] Improve Time & Space Complexity
-* [ ] Solve Medium & Hard problems
-* [ ] Prepare for technical interviews
-* [ ] Stay consistent
-
----
-
-## 📂 Repository Structure
-
-```text
-LeetCode-Solutions/
-│
-├── Python-Easy/
-├── Python-Medium/
-├── Python-Hard/
-│
-├── MySQL-Easy/
-├── MySQL-Medium/
-└── MySQL-Hard/
-```
-
----
-
-## 🌐 Connect With Me
-
-<p align="center">
-
-<a href="https://linkedin.com/in/shravan-kumar-g-111720306">
-<img src="https://img.shields.io/badge/LinkedIn-Shravan%20Kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-
-<a href="https://github.com/shravankumarg361-dotcom">
-<img src="https://img.shields.io/badge/GitHub-Shravan%20Kumar-181717?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-
-<a href="https://leetcode.com/u/Shravankumar42/">
-<img src="https://img.shields.io/badge/LeetCode-Shravankumar42-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
-</a>
-
-</p>
-
----
-
-<p align="center">
-
-### 🚀 Code • Learn • Solve • Improve
-
-⭐ **Thanks for visiting my repository!**
-
-</p>
+if __name__ == "__main__":
+    main()
