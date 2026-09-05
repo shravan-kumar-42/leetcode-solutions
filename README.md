@@ -5,8 +5,11 @@
 <p align="center">
 
 <img src="https://img.shields.io/badge/LeetCode-Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
+
 <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+
 <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+
 <img src="https://img.shields.io/badge/DSA-Python-2EA44F?style=for-the-badge" />
 
 </p>
@@ -23,11 +26,11 @@
 
 </p>
 
-| Category | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🏆 Total |
-|:--------:|:--------:|:----------:|:--------:|:---------:|
-| 🐍 Python + DSA | 1 | 1 | 0 | 2 |
-| 🗄️ MySQL | 4 | 5 | 0 | 9 |
-| **🏆 Overall** | **5** | **6** | **0** | **11** |
+|     Category    | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🏆 Total |
+| :-------------: | :-----: | :-------: | :-----: | :------: |
+| 🐍 Python + DSA |    1    |     1     |    0    |     2    |
+|    🗄️ MySQL    |    4    |     5     |    0    |     9    |
+|  **🏆 Overall** |  **5**  |   **6**   |  **0**  |  **11**  |
 
 <!-- STATS_END -->
 
@@ -39,11 +42,11 @@
 
 I solve my **Data Structures & Algorithms problems using Python**, organized by difficulty.
 
-|   Difficulty  |               Solutions               |
-| :-----------: | :-----------------------------------: |
-|  🟢 **Easy**  |   [View Python Easy](./Python-Easy)   |
-| 🟡 **Medium** | [View Python Medium](./Python-Medium) |
-|  🔴 **Hard**  |   [View Python Hard](./Python-Hard)   |
+|   Difficulty  |                     Solutions                     |
+| :-----------: | :-----------------------------------------------: |
+|  🟢 **Easy**  |   [View Python Easy](./python%20%26%20DSA/Easy)   |
+| 🟡 **Medium** | [View Python Medium](./python%20%26%20DSA/Medium) |
+|  🔴 **Hard**  |   [View Python Hard](./python%20%26%20DSA/Hard)   |
 
 ### 📚 Topics
 
@@ -57,9 +60,9 @@ SQL problems focused on database concepts, query writing, and problem solving.
 
 |   Difficulty  |              Solutions              |
 | :-----------: | :---------------------------------: |
-|  🟢 **Easy**  |   [View MySQL Easy](./MySQL-Easy)   |
-| 🟡 **Medium** | [View MySQL Medium](./MySQL-Medium) |
-|  🔴 **Hard**  |   [View MySQL Hard](./MySQL-Hard)   |
+|  🟢 **Easy**  |   [View MySQL Easy](./MySQL/Easy)   |
+| 🟡 **Medium** | [View MySQL Medium](./MySQL/Medium) |
+|  🔴 **Hard**  |   [View MySQL Hard](./MySQL/Hard)   |
 
 ### 📚 Topics
 
@@ -76,11 +79,11 @@ SQL problems focused on database concepts, query writing, and problem solving.
              ↓
        Find Pattern
              ↓
-            Code
+           Code
              ↓
-            Test
+           Test
              ↓
-          Optimize
+         Optimize
              ↓
            Learn
 ```
@@ -92,17 +95,17 @@ SQL problems focused on database concepts, query writing, and problem solving.
 ## 🔥 Learning Philosophy
 
 ```text
-             CODE
-               ↓
-             DEBUG
-               ↓
+            CODE
+              ↓
+            DEBUG
+              ↓
           UNDERSTAND
-               ↓
+              ↓
            OPTIMIZE
-               ↓
-             LEARN
-               ↓
-            REPEAT
+              ↓
+            LEARN
+              ↓
+           REPEAT
 ```
 
 > **One problem. One concept. One improvement.**
@@ -127,15 +130,19 @@ SQL problems focused on database concepts, query writing, and problem solving.
 ```text
 LeetCode-Solutions/
 │
-├── Python-Easy/
-├── Python-Medium/
-├── Python-Hard/
+├── python & DSA/
+│   ├── Easy/
+│   ├── Medium/
+│   └── Hard/
 │
-├── MySQL-Easy/
-├── MySQL-Medium/
-└── MySQL-Hard/
+├── MySQL/
+│   ├── Easy/
+│   ├── Medium/
+│   └── Hard/
 │
 ├── update_stats.py
+├── README.md
+│
 └── .github/
     └── workflows/
         └── update-readme.yml
