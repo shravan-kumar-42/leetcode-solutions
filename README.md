@@ -19,16 +19,15 @@
 
 <p align="center">
 
-### 🔥 Problems Solved: **0**
+### 🔥 Problems Solved: **11**
 
 </p>
 
-
 | Category | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🏆 Total |
 |:--------:|:--------:|:----------:|:--------:|:---------:|
-| 🐍 Python + DSA | 0 | 0 | 0 | 0 |
-| 🗄️ MySQL | 0 | 0 | 0 | 0 |
-| **🏆 Overall** | **0** | **0** | **0** | **0** |
+| 🐍 Python + DSA | 1 | 1 | 0 | 2 |
+| 🗄️ MySQL | 4 | 5 | 0 | 9 |
+| **🏆 Overall** | **5** | **6** | **0** | **11** |
 
 <!-- STATS_END -->
 
