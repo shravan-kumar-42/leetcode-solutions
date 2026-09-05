@@ -4,14 +4,9 @@ on:
   push:
     branches:
       - main
-
     paths:
-      - "Python-Easy/**"
-      - "Python-Medium/**"
-      - "Python-Hard/**"
-      - "MySQL-Easy/**"
-      - "MySQL-Medium/**"
-      - "MySQL-Hard/**"
+      - "python & DSA/**"
+      - "MySQL/**"
       - "update_stats.py"
 
   workflow_dispatch:
@@ -20,13 +15,10 @@ permissions:
   contents: write
 
 jobs:
-
   update-stats:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -36,20 +28,18 @@ jobs:
           python-version: "3.x"
 
       - name: Update README statistics
-        run: |
-          python update_stats.py
+        run: python update_stats.py
 
       - name: Commit updated README
         run: |
-
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git add README.md
 
           if git diff --cached --quiet; then
-            echo "No README changes."
+            echo "No changes to commit"
           else
-            git commit -m "chore: update README stats [skip ci]"
+            git commit -m "chore: update README stats"
             git push
           fi
