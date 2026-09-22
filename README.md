@@ -22,15 +22,15 @@
 
 <p align="center">
 
-### 🔥 Problems Solved: **86**
+### 🔥 Problems Solved: **87**
 
 </p>
 
 | Category | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🏆 Total |
 |:--------:|:--------:|:----------:|:--------:|:---------:|
-| 🐍 Python + DSA | 33 | 13 | 0 | 46 |
+| 🐍 Python + DSA | 33 | 14 | 0 | 47 |
 | 🗄️ MySQL | 26 | 12 | 2 | 40 |
-| **🏆 Overall** | **59** | **25** | **2** | **86** |
+| **🏆 Overall** | **59** | **26** | **2** | **87** |
 
 <!-- STATS_END -->
 
