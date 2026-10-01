@@ -22,24 +22,15 @@
 
 <p align="center">
 
-<<<<<<< HEAD
-### 🔥 Problems Solved: **118**
-=======
 ### 🔥 Problems Solved: **119**
->>>>>>> 0b60042 (Add LeetCode solution)
 
 </p>
 
 | Category | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🏆 Total |
 |:--------:|:--------:|:----------:|:--------:|:---------:|
 | 🐍 Python + DSA | 35 | 16 | 0 | 51 |
-<<<<<<< HEAD
-| 🗄️ MySQL | 43 | 21 | 3 | 67 |
-| **🏆 Overall** | **78** | **37** | **3** | **118** |
-=======
 | 🗄️ MySQL | 44 | 21 | 3 | 68 |
 | **🏆 Overall** | **79** | **37** | **3** | **119** |
->>>>>>> 0b60042 (Add LeetCode solution)
 
 <!-- STATS_END -->
 
