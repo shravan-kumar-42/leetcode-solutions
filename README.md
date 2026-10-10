@@ -3,15 +3,10 @@
 > 🚀 My journey of solving **DSA, Python & MySQL problems** and continuously improving my problem-solving skills.
 
 <p align="center">
-
-<img src="https://img.shields.io/badge/LeetCode-Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
-
-<img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-
-<img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-
-<img src="https://img.shields.io/badge/DSA-Python-2EA44F?style=for-the-badge" />
-
+  <img src="https://img.shields.io/badge/LeetCode-Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/DSA-Python-2EA44F?style=for-the-badge" />
 </p>
 
 ---
@@ -26,11 +21,11 @@
 
 </p>
 
-| Category | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🏆 Total |
-|:--------:|:--------:|:----------:|:--------:|:---------:|
-| 🐍 Python + DSA | 35 | 16 | 0 | 51 |
-| 🗄️ MySQL | 51 | 23 | 3 | 77 |
-| **🏆 Overall** | **86** | **39** | **3** | **128** |
+|     Category    | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🏆 Total |
+| :-------------: | :-----: | :-------: | :-----: | :------: |
+| 🐍 Python + DSA |    35   |     16    |    0    |    51    |
+|    🗄️ MySQL    |    51   |     23    |    3    |    77    |
+|  **🏆 Overall** |  **86** |   **39**  |  **3**  |  **128** |
 
 <!-- STATS_END -->
 
@@ -40,7 +35,7 @@
 
 ## 🐍 Python & DSA
 
-I solve my **Data Structures & Algorithms problems using Python**, organized by difficulty.
+I solve **Data Structures & Algorithms problems using Python**, organized by difficulty.
 
 |   Difficulty  |                     Solutions                     |
 | :-----------: | :-----------------------------------------------: |
@@ -56,7 +51,7 @@ I solve my **Data Structures & Algorithms problems using Python**, organized by 
 
 ## 🗄️ MySQL
 
-SQL problems focused on database concepts, query writing, and problem solving.
+SQL problems focused on database concepts, query writing, and problem-solving skills.
 
 |   Difficulty  |              Solutions              |
 | :-----------: | :---------------------------------: |
@@ -77,7 +72,7 @@ SQL problems focused on database concepts, query writing, and problem solving.
              ↓
           Analyze
              ↓
-       Find Pattern
+        Find Pattern
              ↓
            Code
              ↓
@@ -114,14 +109,14 @@ SQL problems focused on database concepts, query writing, and problem solving.
 
 ## 🚀 Goals
 
-* 🧠 Strengthen Data Structures & Algorithms
-* 🐍 Improve Python problem solving
-* 🗄️ Master SQL & MySQL
-* ⚡ Learn common DSA patterns
-* 📊 Improve Time & Space Complexity
-* 🔥 Solve more Medium & Hard problems
-* 🎯 Prepare for technical interviews
-* 📈 Maintain consistent coding practice
+* 🧠 Strengthen Data Structures & Algorithms.
+* 🐍 Improve Python problem-solving skills.
+* 🗄️ Master SQL and MySQL.
+* ⚡ Learn common DSA patterns.
+* 📊 Improve time and space complexity.
+* 🔥 Solve more Medium and Hard problems.
+* 🎯 Prepare for technical interviews.
+* 📈 Maintain consistent coding practice.
 
 ---
 
@@ -153,9 +148,7 @@ LeetCode-Solutions/
 ## 💻 Technologies
 
 <p align="center">
-
-<img src="https://skillicons.dev/icons?i=python,mysql,git,github" />
-
+  <img src="https://skillicons.dev/icons?i=python,mysql,git,github" />
 </p>
 
 ---
@@ -163,19 +156,15 @@ LeetCode-Solutions/
 ## 🌐 Connect With Me
 
 <p align="center">
-
-<a href="https://linkedin.com/in/shravan-kumar-g-111720306">
-<img src="https://img.shields.io/badge/LinkedIn-Shravan%20Kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-
-<a href="https://github.com/shravan-kumar-42">
-<img src="https://img.shields.io/badge/GitHub-Shravan%20Kumar-181717?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-
-<a href="https://leetcode.com/u/Shravankumar42/">
-<img src="https://img.shields.io/badge/LeetCode-Shravankumar42-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
-</a>
-
+  <a href="https://linkedin.com/in/shravan-kumar-g-111720306">
+    <img src="https://img.shields.io/badge/LinkedIn-Shravan%20Kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/shravan-kumar-42">
+    <img src="https://img.shields.io/badge/GitHub-Shravan%20Kumar-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://leetcode.com/u/Shravankumar42/">
+    <img src="https://img.shields.io/badge/LeetCode-Shravankumar42-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
+  </a>
 </p>
 
 ---
@@ -192,7 +181,7 @@ One Improvement
 Repeat
 ```
 
-> **Every problem solved is one step closer to mastering problem solving.**
+> **Every problem solved is one step closer to mastering problem-solving.**
 
 ---
 
