@@ -17,15 +17,24 @@
 
 <p align="center">
 
+<<<<<<< HEAD
 ### 🔥 Problems Solved: **138**
+=======
+### 🔥 Problems Solved: **134**
+>>>>>>> e32715d (Add LeetCode solution)
 
 </p>
 
 | Category | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🏆 Total |
 |:--------:|:--------:|:----------:|:--------:|:---------:|
 | 🐍 Python + DSA | 35 | 16 | 0 | 51 |
+<<<<<<< HEAD
 | 🗄️ MySQL | 54 | 29 | 4 | 87 |
 | **🏆 Overall** | **89** | **45** | **4** | **138** |
+=======
+| 🗄️ MySQL | 52 | 27 | 4 | 83 |
+| **🏆 Overall** | **87** | **43** | **4** | **134** |
+>>>>>>> e32715d (Add LeetCode solution)
 
 <!-- STATS_END -->
 
